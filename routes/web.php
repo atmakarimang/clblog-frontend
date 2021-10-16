@@ -30,8 +30,8 @@ Route::get('/about', function () {
     return view('about', [
         "title" => "About",
         "active" => "About",
-        "name" => "Ahmad Reskey",
-        "email" => "ahmadreskey@gmail.com",
+        "name" => "Ahmad Karimang",
+        "email" => "atmakarimang@gmail.com",
         "img" => "cr7.jpg"
     ]);
 });
@@ -42,6 +42,7 @@ Route::get('/blog', [PostController::class, 'index']);
 //Route::get('blog/{slug}', [PostController::class, 'show']); 
 Route::get('blog/{post:slug}', [PostController::class, 'show']);
 
+/*
 Route::get('/kategori', function () {
     return view('kategoriall', [
         'title' => 'Kategori',
@@ -65,3 +66,4 @@ Route::get('/authors/{author:username}', function (User $author) {
         'postinganblog' => $author->postingan->load('kategori', 'user')
     ]);
 });
+*/
